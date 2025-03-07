@@ -1,0 +1,7 @@
+@use '../../styles/variables' as *;
+
+.validation-error {
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  color: $error-color;
+}

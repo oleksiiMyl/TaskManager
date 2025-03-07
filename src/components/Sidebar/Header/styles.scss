@@ -1,0 +1,7 @@
+@use '../../../styles/variables' as *;
+
+.sidebar__header {
+  flex: 0 0 auto;
+  padding: $indent-md;
+  border-bottom: 1px solid $border-color-light;
+}

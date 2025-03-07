@@ -1,0 +1,23 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.board__column {
+  position: relative;
+  width: calc(100% / 5);
+  padding: 0 $indent-sm;
+
+  & + & {
+    border-left: 1px solid $border-color;
+  }
+
+  &.is-droppable {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(to top, #aaa, transparent 100%);
+      @include size(100%, 24px);
+    }
+  }
+}

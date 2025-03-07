@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.input {
+  display: block;
+  padding-left: $indent-sm;
+  padding-right: $indent-sm;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  font-size: $font-size-lg;
+  user-select: none;
+
+  @include size(100%, 32px);
+  @include transition(box-shadow);
+
+  &:focus {
+    box-shadow: $control-shadow;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  &.isInvalid {
+    border-color: $error-color;
+
+    &:focus {
+      box-shadow: $control-shadow-error;
+    }
+  }
+}

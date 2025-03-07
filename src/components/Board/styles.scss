@@ -1,0 +1,11 @@
+@use '../../styles/variables' as *;
+
+.board {
+  flex: 1 1 auto;
+  background-color: $light-background-color;
+  padding: $indent-md;
+
+  @media (max-width: 1024px) {
+    width: fit-content;
+  }
+}

@@ -1,0 +1,20 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  outline: none;
+  border: none;
+}
+
+ul,
+li {
+  list-style: none;
+}

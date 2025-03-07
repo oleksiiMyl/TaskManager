@@ -1,0 +1,124 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+$menu-button-size: 24px;
+
+.card {
+  position: relative;
+  display: flex;
+  padding: $indent-sm;
+  margin: $indent-sm 0;
+  border-radius: $border-radius-md;
+  border: 1px solid $border-color;
+  background-color: $color-white;
+  user-select: none;
+  @include transition(box-shadow);
+
+  &:hover {
+    box-shadow: 0 0 6px 2px $shadow-color;
+  }
+
+  &__inner {
+    flex: 1 1 auto;
+    width: calc(100% - $menu-button-size);
+  }
+
+  &__title {
+    font-size: $font-size;
+    margin-bottom: $indent-sm;
+    @include overflow-ellipsis();
+  }
+
+  &__assignee {
+    font-size: $font-size-sm;
+    color: $light-text-color;
+    margin-bottom: $indent-sm;
+
+    &-employee {
+      font-weight: 600;
+      color: $color-black;
+    }
+  }
+
+  &__status {
+    display: flex;
+  }
+
+  &__menu {
+    position: relative;
+    flex: 0 0 auto;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    color: $color-black;
+    @include transition(border-color);
+    @include square($menu-button-size);
+
+    &:hover {
+      border-color: $border-color;
+    }
+
+    &:hover > .card__dropdown {
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 0;
+    }
+
+    &:before {
+      content: '';
+      border-radius: $border-radius-circle;
+      background-color: currentColor;
+      box-shadow: 6px 0 0 0 currentColor, -6px 0 0 0 currentColor;
+
+      @include absolute-centered();
+      @include size(4px, 4px);
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    white-space: nowrap;
+    padding-right: $indent-xs;
+    background-color: transparent;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.5s;
+    z-index: -1;
+
+    &-inner {
+      background-color: $color-white;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      box-shadow: 0 0 2px 1px $shadow-color;
+      overflow: hidden;
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      gap: $indent-sm;
+      width: 100%;
+      padding: $indent-xs $indent-sm;
+      background-color: $color-white;
+      font-size: $font-size-sm;
+      line-height: $line-height-sm;
+      text-align: left;
+      cursor: pointer;
+
+      @include transition(background-color);
+
+      &:hover {
+        background-color: $light-background-color;
+      }
+    }
+  }
+
+  &[data-drag='true'] {
+    opacity: 0.5;
+  }
+
+  &[data-over-drag='true'] {
+    pointer-events: none;
+  }
+}

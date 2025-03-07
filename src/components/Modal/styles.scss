@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.modal {
+  width: 420px;
+  padding: $indent-xxl;
+  background-color: $color-white;
+  border-radius: $indent-sm;
+  box-shadow: 0 0 8px 2px $dark-shadow-color;
+  text-align: center;
+
+  @include absolute-centered();
+
+  &__title {
+    margin-bottom: $indent-md;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $indent-lg;
+    margin-top: $indent-xxl;
+  }
+}

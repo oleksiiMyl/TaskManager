@@ -1,0 +1,8 @@
+@use '../../styles/variables' as *;
+
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: $indent-xs 0;
+}

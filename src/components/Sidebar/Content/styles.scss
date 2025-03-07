@@ -1,0 +1,10 @@
+@use '../../../styles/variables' as *;
+
+.sidebar__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: $indent-sm;
+  padding: $indent-lg $indent-md;
+  overflow: auto;
+}

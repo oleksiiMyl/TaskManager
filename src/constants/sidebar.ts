@@ -1,0 +1,15 @@
+export const CREATE_TASK_TITLE = 'Create new task';
+export const EDIT_TASK_TITLE = 'Edit task';
+export const TITLE_LABEL = 'Title';
+export const TITLE_PLACEHOLDER = 'Enter title';
+export const DESCRIPTION_LABEL = 'Description';
+export const DESCRIPTION_PLACEHOLDER = 'Enter description';
+export const ASSIGNEE_LABEL = 'Assignee';
+export const ASSIGNEE_PLACEHOLDER = 'Assigned to creator (by default)';
+export const STATUS_LABEL = 'Status';
+export const CANCEL_BUTTON_TEXT = 'Cancel';
+export const CREATE_BUTTON_TEXT = 'Create';
+export const APPLY_BUTTON_TEXT = 'Apply';
+export const CREATE_MODE = 'create';
+export const EDIT_MODE = 'edit';
+export const TITLE_VALIDATION_ERROR = 'Should contains min 3 symbols';

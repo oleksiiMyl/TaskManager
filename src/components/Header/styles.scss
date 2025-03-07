@@ -1,0 +1,11 @@
+@use '../../styles/variables' as *;
+
+.header {
+  padding: $indent-md;
+  background-color: $background-color;
+  border-bottom: 1px solid $border-color;
+
+  @media (max-width: 1024px) {
+    width: fit-content;
+  }
+}

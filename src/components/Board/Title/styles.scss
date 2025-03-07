@@ -1,0 +1,12 @@
+@use '../../../styles/variables' as *;
+
+.board__title {
+  width: calc(100% / 5);
+  padding: $indent-xs;
+  text-align: center;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  color: $color-white;
+  letter-spacing: 0.1em;
+  user-select: none;
+}

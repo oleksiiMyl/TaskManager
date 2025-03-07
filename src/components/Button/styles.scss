@@ -1,0 +1,36 @@
+@use '../../styles/variables' as *;
+
+.button {
+  display: block;
+  width: 100%;
+  padding: $indent-sm;
+  border-radius: $border-radius;
+  background-color: $primary-color;
+  color: $color-white;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-color-hover;
+  }
+
+  &:active {
+    background-color: $primary-color-active;
+  }
+
+  &:focus-visible {
+    box-shadow: $control-shadow;
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+
+    &:hover {
+      background-color: $secondary-color-hover;
+    }
+
+    &:active {
+      background-color: $secondary-color-active;
+    }
+  }
+}

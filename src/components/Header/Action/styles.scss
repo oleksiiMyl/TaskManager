@@ -1,0 +1,6 @@
+@use '../../../styles/variables' as *;
+
+.header__action {
+  width: 220px;
+  margin: $indent-sm auto 0;
+}

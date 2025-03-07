@@ -1,0 +1,9 @@
+@use '../../../styles/variables' as *;
+
+.board__inner {
+  display: flex;
+  flex: 1 1 auto;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  overflow: auto;
+}

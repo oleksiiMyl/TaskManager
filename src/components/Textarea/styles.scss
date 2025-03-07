@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.textarea {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  padding: $indent-xs $indent-sm;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  font-size: $font-size-lg;
+  letter-spacing: -1px;
+  user-select: none;
+  resize: none;
+  @include transition(box-shadow);
+
+  &:focus {
+    box-shadow: $control-shadow;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+}

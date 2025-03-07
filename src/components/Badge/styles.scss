@@ -1,0 +1,27 @@
+@use '../../styles/variables' as *;
+
+.badge {
+  min-width: 80px;
+  padding: 0 $indent-sm;
+  text-align: center;
+  font-size: 10px;
+  line-height: 14px;
+  border-radius: $border-radius-md;
+  background: rgba(9, 9, 9, 0.2);
+
+  &--progress {
+    background: rgba(39, 1, 209, 0.2);
+  }
+
+  &--review {
+    background: rgba(231, 44, 6, 0.2);
+  }
+
+  &--test {
+    background: rgba(107, 107, 4, 0.2);
+  }
+
+  &--done {
+    background: rgba(4, 201, 27, 0.2);
+  }
+}

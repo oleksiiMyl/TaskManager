@@ -1,0 +1,14 @@
+@use '../../styles/variables' as *;
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  box-shadow: 0 0 8px 2px $dark-shadow-color;
+  border-radius: 0 $border-radius-md $border-radius-md 0;
+}

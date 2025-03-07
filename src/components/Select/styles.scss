@@ -1,0 +1,23 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.select {
+  display: block;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  padding-left: $indent-xs;
+  padding-right: $indent-xxl;
+  font-size: $font-size-lg;
+  user-select: none;
+
+  @include size(100%, 32px);
+
+  &:focus {
+    box-shadow: $control-shadow;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+}
